@@ -6,7 +6,7 @@
 /*   By: mcatal-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 12:40:07 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/05/21 22:18:38 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/05/21 23:16:10 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,10 @@ int main( void )
 	std::cout << std::endl;
 
 	std::cout << "Create cat2" << std::endl;
+    Dog basic;
+    {
+        Dog tmp = basic;
+    }
 	Cat *cat2 = new Cat();
 	std::cout << std::endl;
 
