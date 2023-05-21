@@ -6,7 +6,7 @@
 #    By: mcatal-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/21 11:48:18 by mcatal-d          #+#    #+#              #
-#    Updated: 2023/05/22 00:16:26 by mcatal-d         ###   ########.fr        #
+#    Updated: 2023/05/21 22:14:00 by mcatal-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRC             = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.c
 
 OBJ             = $(SRC:.cpp=.o)
 CC              = c++
-CFLAGS  		= -Wall -Wextra -Werror -std=c++98
+CFLAGS  		= -Wall -Wextra -Werror -std=c++98 -g3
 RM              = rm -f
 
 all: $(NAME)
