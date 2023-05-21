@@ -1,0 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcatal-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/22 01:11:06 by mcatal-d          #+#    #+#             */
+/*   Updated: 2023/05/22 01:20:04 by mcatal-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef MATERIASOURCE_HPP_
+# define MATERIASOURCE_HPP_
+
+# include "IMateriaSource.hpp"
+
+# include <string>
+
+class MateriaSource : public IMateriaSource {
+	public:
+		MateriaSource();
+		MateriaSource(const MateriaSource& other);
+		~MateriaSource();
+
+		MateriaSource& operator=(const MateriaSource& other);
+
+		void learnMateria(AMateria *materia);
+		AMateria* createMateria(const std::string& type);
+	private:
+		static const int kMateriaSize = 4;
+
+		AMateria* _materias[MateriaSource::kMateriaSize];
+		int _nLearned;
+};
+
+#endif
