@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcatal-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 12:05:48 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/05/21 23:15:29 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/05/22 14:53:14 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ Cat::~Cat()
 Cat	&Cat::operator=(const Cat &copy)
 {
     std::cout << "Cat assignation operator called" << std::endl;
-    std::cout << std::endl << std::endl << std::endl << std::endl << "this->brain = " << this->brain->getIdea(0) << std::endl;
     delete this->brain;
     this->type = copy.type;
     this->brain = new Brain(*copy.brain);

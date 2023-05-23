@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcatal-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 01:11:26 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/05/22 01:24:44 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/05/22 13:16:15 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,7 @@ void MateriaSource::learnMateria(AMateria *materia) {
 AMateria *MateriaSource::createMateria(const std::string& type) {
 	for (int i = 0; i < MateriaSource::kMateriaSize; i++) {
 		if (this->_materias[i]->getType() == type) {
-			return this->_materias[i]->clone(); // deep copy
-			//return this->_materias[i]; // shallow copy
+			return this->_materias[i]->clone();
 		}
 	}
 	return NULL;

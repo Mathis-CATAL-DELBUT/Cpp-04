@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcatal-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 01:05:21 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/05/22 01:36:02 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/05/22 14:00:08 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,7 @@ Character::Character(std::string name)
 Character::Character(const Character &copy)
 {*this = copy;}
 
-Character::~Character()
-{
-    for (int i = 0; i < 4; i++)
-        if (this->inventory[i])
-            delete this->inventory[i];
-}
+Character::~Character() {}
 
 Character	&Character::operator=(const Character &copy)
 {
@@ -63,6 +58,7 @@ void Character::unequip(int idx)
 {
     if (idx >= 0 && idx < 4)
     {
+        delete this->inventory[idx];
         this->inventory[idx] = NULL;
         this->count--;
     }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcatal-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 01:02:43 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/05/22 01:22:53 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/05/23 12:54:11 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 class Character : public ICharacter {
 	public:
+		Character();
 		Character(std::string name);
 		Character(const Character& other);
 		~Character();
@@ -30,12 +31,8 @@ class Character : public ICharacter {
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);
 	private:
-		Character();
-
-		static const int kInventorySize = 4;
-
 		std::string name;
-		AMateria* inventory[Character::kInventorySize];
+		AMateria* inventory[4];
 		int count;
 };
 

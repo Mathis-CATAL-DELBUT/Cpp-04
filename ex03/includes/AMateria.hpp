@@ -1,19 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcatal-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/21 11:49:39 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/05/21 14:37:30 by mcatal-d         ###   ########.fr       */
+/*   Created: 2023/05/22 01:01:15 by mcatal-d          #+#    #+#             */
+/*   Updated: 2023/05/23 13:05:04 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
-
-# include <iostream>
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
 
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
@@ -26,18 +24,27 @@
 #define BOLD    "\033[1m"
 #define UNDERLINE   "\033[4m"
 
-class Animal
-{
-    protected:
-        std::string		type;
-    public:
-        Animal();
-        Animal(std::string type);
-        Animal(const Animal &copy);
-        virtual ~Animal();
-        Animal	&operator=(const Animal &copy);
-        std::string		getType() const;
-        virtual void	makeSound() const;
+# include "ICharacter.hpp"
+# include <iostream>
+# include <string>
+
+class ICharacter;
+
+class AMateria {
+	public:
+		AMateria(const std::string& type);
+		virtual ~AMateria();
+        AMateria(const AMateria& other);
+        
+		const std::string& getType() const;
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target);
+        
+        AMateria& operator=(const AMateria& other);
+	protected:
+		std::string type;
+	private:
+		AMateria();
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcatal-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 12:40:07 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/05/21 23:16:10 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/05/22 14:51:55 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,22 +52,6 @@ int main( void )
     {
         std::cout << std::endl << GREY << "--------------- Brain ---------------" << RESET << std::endl << std::endl;
         
-        // const Animal* j = new Dog();
-        // const Animal* i = new Cat();
-
-        // delete j;
-        // delete i;
-
-        // Dog basic;
-        // {
-        //     Dog tmp = basic;
-        // }
-
-        // const Animal* animals[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
-        // for ( int i = 0; i < 4; i++ ) {
-        //     delete animals[i];
-        // }
-        
 	Dog *dog = new Dog();
 	Cat *cat = new Cat();
 
@@ -94,10 +78,10 @@ int main( void )
 	std::cout << std::endl;
 
 	std::cout << "Create cat2" << std::endl;
-    Dog basic;
-    {
-        Dog tmp = basic;
-    }
+    // Dog basic;
+    // {
+    //     Dog tmp = basic;
+    // }
 	Cat *cat2 = new Cat();
 	std::cout << std::endl;
 
